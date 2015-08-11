@@ -13,7 +13,7 @@ Taxi.prototype.passengerCount = function() {
 };
 
 Taxi.prototype.full = function(){
-  return this.maxNumberOfPassengers === this.passengers.length;
+  return (this.maxNumberOfPassengers === this.passengers.length);
 };
 
 Taxi.prototype.dropOffPassengers = function() {
