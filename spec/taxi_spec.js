@@ -3,7 +3,7 @@ var Taxi = require('../taxi');
 describe('properties', function() {
   var cab = new Taxi("Phil Collins", 6);
 
-  it('has a String driverName', function() {    
+  it('has a String driverName', function() {
     expect(cab.driverName).toEqual('Phil Collins');
   });
 

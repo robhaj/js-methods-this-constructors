@@ -1,12 +1,24 @@
 function Taxi(driverName, maxNumberOfPassengers) {
-  // your code here
+  this.driverName = driverName;
+  this.maxNumberOfPassengers = maxNumberOfPassengers;
+  this.passengers = [];
 }
 
 Taxi.prototype.addPassenger = function(passengerName) {
-  // your code here
+  this.passengers.push(passengerName);
 };
 
-// your code here
+Taxi.prototype.passengerCount = function() {
+  return this.passengers.length;
+};
+
+Taxi.prototype.full = function(){
+  return this.maxNumberOfPassengers === this.passengers.length;
+};
+
+Taxi.prototype.dropOffPassengers = function() {
+  this.passengers = [];
+};
 
 // DO NOT MODIFY BELOW THIS COMMENT:
 module.exports = Taxi;

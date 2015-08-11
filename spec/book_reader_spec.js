@@ -28,7 +28,7 @@ describe('#nextPage', function() {
   it('does not allow the user to turn beyond the last page of the book', function() {
     var reader = new BookReader(shortExampleBook);
     reader.nextPage();
-
+    
     expect(reader.nextPage()).toEqual('short');
     expect(reader.nextPage()).toEqual('short');
     expect(reader.nextPage()).toEqual('short');
